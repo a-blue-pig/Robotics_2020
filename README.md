@@ -3,8 +3,8 @@
 
 
 
-#### The breakdown:
-##### Master Branch
+
+#### Master Branch
 
 Robotics_2019
 * __src__     ------> main files
@@ -16,7 +16,7 @@ Robotics_2019
   * main.h
 
 
-##### Odometry Branch
+#### Odometry Branch
 
 Robotics_2019
 * __src__     ------> main files
