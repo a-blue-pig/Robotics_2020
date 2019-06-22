@@ -1,26 +1,19 @@
 #include "main.h"
+double initialLocation[2];
 
-void on_center_button() {
-	static bool pressed = false;
-	pressed = !pressed;
-	if (pressed) {
-		pros::lcd::set_text(2, "I was pressed!");
-	} else {
-		pros::lcd::clear_line(2);
-	}
-}
-
-/**
- * Runs initialization code. This occurs as soon as the program is started.
- *
- * All other competition modes are blocked by initialize; it is recommended
- * to keep execution time for this mode under a few seconds.
- */
 void initialize() {
 	pros::lcd::initialize();
-	pros::lcd::set_text(1, "Hello PROS User!");
+	pros::lcd::set_text(1, "Testing odometry");
 
-	pros::lcd::register_btn1_cb(on_center_button);
+	pros::ADIEncoder leftEncoder (leftP1, leftP2, false);
+	pros::ADIEncoder rightEncoder (rightP1, rightP2, false);
+	pros::ADIEncoder sideEncoder (sideP1, sideP2, false);
+
+	pros::Motor lf_mtr_init (lf_mtr_prt, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_ENCODER_ROTATIONS);
+	pros::Motor lb_mtr_init (lb_mtr_prt, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_ENCODER_ROTATIONS);
+	pros::Motor rf_mtr_init (rf_mtr_prt, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_ROTATIONS);
+	pros::Motor rb_mtr_init (rb_mtr_prt, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_ROTATIONS);
+
 }
 
 /**
@@ -39,4 +32,9 @@ void disabled() {}
  * This task will exit when the robot is enabled and autonomous or opcontrol
  * starts.
  */
-void competition_initialize() {}
+void competition_initialize() {
+	//take in the value or preset from display
+	//set up the inital location here:
+	//initialLocation[0] = ;
+	//initialLocation[1] = ;
+}
