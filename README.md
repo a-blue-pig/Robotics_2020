@@ -3,19 +3,33 @@
 
 
 
-### The breakdown:
+#### The breakdown:
+##### Master Branch
+
 Robotics_2019
-* __src__ --> main files:
+* __src__     ------> main files
+  * autonomous.cpp
+  * initialize.cpp
   * opcontrol.cpp
+
+* __include__ ------> header files
+  * main.h
+
+
+##### Odometry Branch
+
+Robotics_2019
+* __src__     ------> main files
   * autonomous.cpp
   * initialize.cpp
   * harmonyCommands.cpp
-* __include__ --> header files:
-  * main.h
+  * opcontrol.cpp
+
+* __include__ ------> header files
   * api.h
   * harmonyAPI
     * odometry.hpp
+  * main.h
 
-
-
-Those files are custom made algorithms and methods intended to facilitate programming, driving utility, and increase the ability of the robot to complete tasks quickly, accurately, and correctly.
+Currently the odometry branch is underwork.
+The only goal is to implement a position tracking task, along with the funcitons and methods that will enable movement to a point on the field.
