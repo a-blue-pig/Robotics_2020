@@ -1,7 +1,7 @@
 # Welcome to the Robotics_2020 repository
-##  Here you will find all the code pertaining to team 834B "the good team"
+####  Here you will find all the code pertaining to team 834B "the good team"
 
-# The breakdown:
+#### The breakdown:
 Inside of src you can find the 3 main files:
 * opcontrol.cpp
 * autonomous.cpp
