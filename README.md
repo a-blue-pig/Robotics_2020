@@ -6,7 +6,6 @@
 
 #### Master Branch
 
-Robotics_2019
 * __src__     ------> main files
   * autonomous.cpp
   * initialize.cpp
@@ -18,7 +17,6 @@ Robotics_2019
 
 #### Odometry Branch
 
-Robotics_2019
 * __src__     ------> main files
   * autonomous.cpp
   * initialize.cpp
