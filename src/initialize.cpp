@@ -1,5 +1,4 @@
 #include "main.h"
-double initialLocation[2];
 
 void initialize() {
 	pros::lcd::initialize();
@@ -14,6 +13,12 @@ void initialize() {
 	pros::Motor rf_mtr_init (rf_mtr_prt, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_ROTATIONS);
 	pros::Motor rb_mtr_init (rb_mtr_prt, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_ROTATIONS);
 
+	delta_L_P = 0;
+	delta_R_P = 0;
+	delta_S_P = 0;
+	reset_theta = previous_theta = 0; //fill in
+	previousLocation[0] = 0; //fill in
+	previousLocation[1] = 0; //fill in
 }
 
 /**
@@ -35,6 +40,24 @@ void disabled() {}
 void competition_initialize() {
 	//take in the value or preset from display
 	//set up the inital location here:
-	//initialLocation[0] = ;
-	//initialLocation[1] = ;
+	switch (/*button thing on lcd*/) {
+		case /*the button*/:
+			delta_L_P = ;
+			delta_R_P = ;
+			delta_S_P = ;
+			reset_theta = ;
+			previous_theta = ;
+			previousLocation[0] = ;
+			previousLocation[1] = ;
+			break;
+		default:
+			delta_L_P = ;
+			delta_R_P = ;
+			delta_S_P = ;
+			reset_theta = ;
+			previous_theta = ;
+			previousLocation[0] = ;
+			previousLocation[1] = ;
+			break;
+	}
 }
