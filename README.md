@@ -11,10 +11,6 @@ Inside of include you can find the 2 API files:
 -->main.h
 -->api.h
 
-
-**inprogress**---
-                |
-                v
 Inside of src and include you will find:
 -->a .h file for declarations and definitions
 -->a cpp file for functions and algorithms that were made to be implemented across the entire project.
