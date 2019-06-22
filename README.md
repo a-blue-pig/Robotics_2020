@@ -1,10 +1,11 @@
-Welcome to the Robotics_2019 repository
-Here you will find all the code pertaining to team 834B "the good team"
+#Welcome to the Robotics_2020 repository
+##Here you will find all the code pertaining to team 834B "the good team"
 
+#The breakdown:
 Inside of src you can find the 3 main files:
--->Opcontrol.cpp
--->Autonomous.cpp
--->Initialize.cpp
+*opcontrol.cpp
+*autonomous.cpp
+*initialize.cpp
 
 Inside of include you can find the 2 API files:
 -->main.h
