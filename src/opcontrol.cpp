@@ -28,8 +28,8 @@
 			 translationLocal[1]=delta_R;
 		 }else{
 			 double outside{2*std::sin((delta_theta/2))};
-			 translationLocal[0]= outide*((delta_S/delta_theta)+ss);
-			 translationLocal[1]= outide*((delta_R/delta_theta)+sr);
+			 translationLocal[0]= outside*((delta_S/delta_theta)+ss);
+			 translationLocal[1]= outside*((delta_R/delta_theta)+sr);
 		 }
 		 //Step 7: Calculate average orientation
 		 theta_M = previous_theta + (delta_theta/2);

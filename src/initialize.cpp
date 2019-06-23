@@ -38,26 +38,23 @@ void disabled() {}
  * starts.
  */
 void competition_initialize() {
+	delta_L_P = 0;
+	delta_R_P = 0;
+	delta_S_P = 0;
 	//take in the value or preset from display
 	//set up the inital location here:
-	switch (/*button thing on lcd*/) {
-		case /*the button*/:
-			delta_L_P = ;
-			delta_R_P = ;
-			delta_S_P = ;
-			reset_theta = ;
-			previous_theta = ;
-			previousLocation[0] = ;
-			previousLocation[1] = ;
+	switch (/*button thing on lcd*/0) { //fill in
+		case /*the button*/0: //fill in
+			reset_theta = 0; //fill in
+			previous_theta = 0; //fill in
+			previousLocation[0] = 0; //fill in
+			previousLocation[1] = 0; //fill in
 			break;
 		default:
-			delta_L_P = ;
-			delta_R_P = ;
-			delta_S_P = ;
-			reset_theta = ;
-			previous_theta = ;
-			previousLocation[0] = ;
-			previousLocation[1] = ;
+			reset_theta = 0; //fill in
+			previous_theta = 0; //fill in
+			previousLocation[0] = 0; //fill in
+			previousLocation[1] = 0; //fill in
 			break;
 	}
 }
