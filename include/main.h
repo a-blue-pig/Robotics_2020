@@ -35,10 +35,10 @@ void opcontrol(void);
 
 
 
-#define lf_mtr_prt 1
-#define lb_mtr_prt 2
-#define rf_mtr_prt 3
-#define rb_mtr_prt 4
+#define lf_mtr_prt 1 //fill in
+#define lb_mtr_prt 2 //fill in
+#define rf_mtr_prt 3 //fill in
+#define rb_mtr_prt 4 //fill in
 
 
 
