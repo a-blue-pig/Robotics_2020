@@ -52,6 +52,7 @@
 	 }
  }
 
+
 void opcontrol() {
 	pros::Controller master(pros::E_CONTROLLER_MASTER);
 	pros::Motor lf_mtr (lf_mtr_prt);
@@ -59,7 +60,7 @@ void opcontrol() {
 	pros::Motor rf_mtr (rf_mtr_prt);
 	pros::Motor rb_mtr (rb_mtr_prt);
 
-	pros::Task task(tracking);
+	pros::Task trackTask(tracking);
 
 	while (true) {
 

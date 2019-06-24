@@ -1,8 +1,7 @@
 #include "main.h"
 
 void initialize() {
-	pros::lcd::initialize();
-	pros::lcd::set_text(1, "Testing odometry");
+
 
 	pros::ADIEncoder leftEncoder (leftP1, leftP2, false);
 	pros::ADIEncoder rightEncoder (rightP1, rightP2, false);
