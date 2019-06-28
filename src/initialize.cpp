@@ -1,8 +1,18 @@
 #include "main.h"
+double sl{0}; //fill in
+double sr{0}; //fill in
+double ss{0}; //fill in
+
+double wheelRadius{1.625}; //fill in
+double conversion{0.01745};
+
+int delta_L_R{0}, delta_R_R{0};
+double delta_L{0}, delta_R{0}, delta_S{0}, delta_L_P{0}, delta_R_P{0}, delta_S_P{0};
+double reset_theta{0}, theta_M{0}, delta_theta{0}, previous_theta{0}, current_theta{0};
+double currentLocation[2]{0,0}, translationGlobal[2]{0,0}, translationLocal[2]{0,0}, previousLocation[2]{0,0};
 
 void initialize() {
-
-
+	//global stuffs
 	pros::ADIEncoder leftEncoder (leftP1, leftP2, false);
 	pros::ADIEncoder rightEncoder (rightP1, rightP2, false);
 	pros::ADIEncoder sideEncoder (sideP1, sideP2, false);
