@@ -1,7 +1,7 @@
 #include "main.h"
-double sl{0}; //fill in
-double sr{0}; //fill in
-double ss{0}; //fill in
+double sl{6.29}; //fill in
+double sr{6.29}; //fill in
+double ss{4.81}; //fill in
 
 double wheelRadius{1.625}; //fill in
 double conversion{0.01745};

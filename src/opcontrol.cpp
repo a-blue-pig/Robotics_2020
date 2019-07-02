@@ -1,6 +1,5 @@
 #include "main.h"
 
-
  void tracking(void*){
 	 pros::ADIEncoder leftEncoder (leftP1, leftP2);
 	 pros::ADIEncoder rightEncoder (rightP1, rightP2);
@@ -55,20 +54,24 @@
 
 void opcontrol() {
 	pros::Controller master(pros::E_CONTROLLER_MASTER);
-	pros::Motor lf_mtr (lf_mtr_prt);
-	pros::Motor lb_mtr (lb_mtr_prt);
-	pros::Motor rf_mtr (rf_mtr_prt);
-	pros::Motor rb_mtr (rb_mtr_prt);
+	pros::Motor lf_mtr(lf_mtr_prt);
+	pros::Motor lb_mtr(lb_mtr_prt);
+	pros::Motor rf_mtr(rf_mtr_prt, true);
+	pros::Motor rb_mtr(rb_mtr_prt, true);
 
 	pros::Task trackTask(tracking);
 
 	while (true) {
-
-		int left = master.get_analog(ANALOG_LEFT_Y);
-		int right = master.get_analog(ANALOG_RIGHT_Y);
-
-		lf_mtr = lb_mtr = left;
-		rf_mtr = rb_mtr = right;
-		pros::delay(20);
+    int left = master.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
+    int right = master.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y);
+    lf_mtr.move_velocity(left); lb_mtr.move_velocity(left);
+    rf_mtr.move_velocity(right); rb_mtr.move_velocity(right);
+    int x = (int)currentLocation[0];
+    int y = (int)currentLocation[1];
+    int a = (int) current_theta;
+    std::printf("X: %f",wheelRadius);
+    std::printf(" Y: %f",conversion);
+    std::printf(" A: %d\r",a);
+    pros::delay(2);
 	}
 }
