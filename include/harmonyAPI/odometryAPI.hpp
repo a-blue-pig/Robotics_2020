@@ -18,8 +18,7 @@ extern double ss; //fill in
 extern double wheelRadius; //fill in
 extern double conversion;
 
-extern int delta_L_R, delta_R_R;
-extern double delta_L, delta_R, delta_S, delta_L_P, delta_R_P, delta_S_P;
+extern double delta_L, delta_R, delta_S, delta_L_P, delta_R_P, delta_S_P, delta_L_R, delta_R_R;
 extern double reset_theta, theta_M, delta_theta, previous_theta, current_theta;
 extern double currentLocation[2], translationGlobal[2], translationLocal[2], previousLocation[2];
 

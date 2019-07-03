@@ -1,10 +1,10 @@
 #include "main.h"
 
  void tracking(void*){
-	 pros::ADIEncoder leftEncoder (leftP1, leftP2);
+	 pros::ADIEncoder leftEncoder (leftP1, leftP2, true);
 	 pros::ADIEncoder rightEncoder (rightP1, rightP2);
 	 pros::ADIEncoder sideEncoder (sideP1, sideP2);
-
+   delta_L_P = delta_R_P = delta_S_P = 0.0;
 	 while(true){
 		 //Step 1: take the current values:
 		 int left_value{leftEncoder.get_value()};
@@ -14,9 +14,14 @@
 		 delta_L = (double)(left_value-delta_L_P)*wheelRadius*conversion;
 		 delta_R = (double)(right_value-delta_R_P)*wheelRadius*conversion;
 		 delta_S = (double)(side_value-delta_S_P)*wheelRadius*conversion;
+     delta_L_P = left_value;
+		 delta_R_P = right_value;
+		 delta_S_P = side_value;
 		 //Step 3: find total change from last reset in inches and store
 		 delta_L_R = left_value*wheelRadius*conversion;
 		 delta_R_R = right_value*wheelRadius*conversion;
+     std::printf("Left: %f", delta_L_R);
+     std::printf(" Right: %f\r", delta_R_R);
 		 //Step 4: Find the absolute orientation
 		 current_theta  = reset_theta + ((delta_L_R-delta_R_R)/(sl+sr));
 		 //Step 5: find the change in angle
@@ -42,12 +47,11 @@
 		 currentLocation[0] = previousLocation[0]+translationGlobal[0];
 		 currentLocation[1] = previousLocation[1]+translationGlobal[1];
 		 //Step 10: update the value to be used for the next check(update previous value)
-		 delta_L_P = left_value;
-		 delta_R_P = right_value;
-		 delta_S_P = side_value;
+
 		 previous_theta = current_theta;
 		 previousLocation[0] = currentLocation[0];
 		 previousLocation[1] = currentLocation[1];
+     pros::delay(2);
 	 }
  }
 
@@ -67,12 +71,6 @@ void opcontrol() {
     int right = master.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y);
     lf_mtr.move_velocity(left); lb_mtr.move_velocity(left);
     rf_mtr.move_velocity(right); rb_mtr.move_velocity(right);
-    int x = (int)currentLocation[0];
-    int y = (int)currentLocation[1];
-    int a = (int) current_theta;
-    std::printf("X: %f",wheelRadius);
-    std::printf(" Y: %f",conversion);
-    std::printf(" A: %d\r",a);
     pros::delay(2);
 	}
 }
