@@ -1,4 +1,5 @@
 #include "main.h"
+
 double sl{6.29}; //fill in
 double sr{6.29}; //fill in
 double ss{4.81}; //fill in
@@ -16,11 +17,6 @@ void initialize() {
 	pros::ADIEncoder leftEncoder (leftP1, leftP2, false);
 	pros::ADIEncoder rightEncoder (rightP1, rightP2, false);
 	pros::ADIEncoder sideEncoder (sideP1, sideP2, false);
-
-	pros::Motor lf_mtr_init (lf_mtr_prt, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_ENCODER_ROTATIONS);
-	pros::Motor lb_mtr_init (lb_mtr_prt, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_ENCODER_ROTATIONS);
-	pros::Motor rf_mtr_init (rf_mtr_prt, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_ROTATIONS);
-	pros::Motor rb_mtr_init (rb_mtr_prt, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_ROTATIONS);
 
 	delta_L_P = 0;
 	delta_R_P = 0;

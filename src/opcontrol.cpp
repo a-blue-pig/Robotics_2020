@@ -54,10 +54,11 @@
 
 void opcontrol() {
 	pros::Controller master(pros::E_CONTROLLER_MASTER);
-	pros::Motor lf_mtr(lf_mtr_prt);
-	pros::Motor lb_mtr(lb_mtr_prt);
-	pros::Motor rf_mtr(rf_mtr_prt, true);
-	pros::Motor rb_mtr(rb_mtr_prt, true);
+
+  pros::Motor lf_mtr (lf_mtr_prt, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_ROTATIONS);
+  pros::Motor lb_mtr (lb_mtr_prt, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_ROTATIONS);
+  pros::Motor rf_mtr (rf_mtr_prt, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_ENCODER_ROTATIONS);
+  pros::Motor rb_mtr (rb_mtr_prt, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_ENCODER_ROTATIONS);
 
 	pros::Task trackTask(tracking);
 

@@ -8,6 +8,12 @@
 
 #include "api.h"
 
+#define lf_mtr_prt 1 //fill in
+#define lb_mtr_prt 2 //fill in
+#define rf_mtr_prt 10 //fill in
+#define rb_mtr_prt 9 //fill in
+
+
 //#include "okapi/api.hpp"
 //#include "pros/api_legacy.h"
 
@@ -32,14 +38,6 @@ void initialize(void);
 void disabled(void);
 void competition_initialize(void);
 void opcontrol(void);
-
-
-
-#define lf_mtr_prt 1 //fill in
-#define lb_mtr_prt 2 //fill in
-#define rf_mtr_prt 10 //fill in
-#define rb_mtr_prt 9 //fill in
-
 
 
 #ifdef __cplusplus
