@@ -1,5 +1,3 @@
-#define USING_ODOMETRY
-#define USING_SETUP
 #include "main.h"
 /**
  * Runs the operator control code. This function will be started in its own task
@@ -15,7 +13,7 @@
  * task, not resume it from where it left off.
  */
 void opcontrol() {
-	//pros::Controller master(pros::E_CONTROLLER_MASTER);
+	pros::Controller master(pros::E_CONTROLLER_MASTER);
 	pros::Motor left_mtr(1);
 	pros::Motor right_mtr(2);
 	while (true) {
@@ -28,7 +26,5 @@ void opcontrol() {
 		left_mtr = left;
 		right_mtr = right;
 		pros::delay(20);
-		initOdom(false, false, false, 0.0, 0.0, 0.0);
-		pros::Task trackingTask(tracking);
 	}
 }
