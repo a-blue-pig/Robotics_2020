@@ -1,4 +1,9 @@
-*
 .DS_Store
-!README.md
-!.gitignore
+.vscode
+bin
+firmware
+include
+.mk
+.json
+.pros
+Makefile
