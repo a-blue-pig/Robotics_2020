@@ -1,11 +1,19 @@
 .DS_Store
+
 .vscode
-bin
-firmware
-include
+
+bin/
+
+firmware/
+
+include/
+
 .mk
+
 .json
+
 .pros
+
 Makefile
 
 *.pros
