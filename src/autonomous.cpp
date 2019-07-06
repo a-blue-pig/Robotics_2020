@@ -1,3 +1,4 @@
+#define USING_ODOMETRY
 #include "main.h"
 
 /**
@@ -11,4 +12,8 @@
  * will be stopped. Re-enabling the robot will restart the task, not re-start it
  * from where it left off.
  */
-void autonomous() {}
+void autonomous() {
+  initOdom(false, false, false, 0.0, 0.0, 0.0);
+  pros::Task trackingTask(tracking);
+
+}
