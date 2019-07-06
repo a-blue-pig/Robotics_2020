@@ -1,10 +1,11 @@
 /**
-* \file harmonyAPI/Modules/Odometry/odometry.hpp
+* @file harmonyAPI/Modules/Odometry/odometry.hpp
+* @brief Header file for odometry functions.
 * ## The File
 * A header file with the, forward declarations, global variables, and structs
 * to be used for odometry.
 *
-* ## Related Files:
+* @see odometry.cpp
 */
 #ifndef ODOMETRY_HPP_INCLUDED
 #define ODOMETRY_HPP_INCLUDED
@@ -28,7 +29,7 @@ static const double sl{0},               // distance from left tracking wheel to
 pros::ADIEncoder leftEncoder(leftP1, leftP2);
 pros::ADIEncoder rightEncoder(leftP1, leftP2);
 pros::ADIEncoder sideEncoder(leftP1, leftP2);
-/**
+/** @struct
 * @brief A struct.
 * Holds the X, Y, and angle of the robot in addition to the previous values.
 *
@@ -48,7 +49,7 @@ struct harmony_odom_t
 //If the top doesnt work use the bottom:
 //static struct harmony_odom_t scorpio_odom;
 
-/**
+/** @struct
 * @brief A struct.
 * Holds all the values used from the encoders, in addition to the variables.
 *
