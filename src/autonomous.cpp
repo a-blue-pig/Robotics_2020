@@ -1,4 +1,5 @@
-#define USING_ODOMETRY
+//#define USING_MOTORSETUP
+//#define USING_ODOMETRY
 #include "main.h"
 
 /**
@@ -13,7 +14,7 @@
  * from where it left off.
  */
 void autonomous() {
-  initOdom(false, false, false, 0.0, 0.0, 0.0);
-  pros::Task trackingTask(tracking);
+  //initOdom(false, false, false, 0.0, 0.0, 0.0);
+  //pros::Task trackingTask(tracking);
 
 }

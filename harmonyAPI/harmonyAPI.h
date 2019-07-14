@@ -29,8 +29,8 @@
 #endif
 
 ///Enable port setup (motors)
-#ifdef  USING_SETUP
-  #include "Modules/Setup/setup.hpp"
+#ifdef  USING_MOTORSETUP
+  #include "Modules/Setup/motorsetup.hpp"
 #endif
 
 #endif

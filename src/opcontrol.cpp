@@ -1,4 +1,4 @@
-#define USING_SETUP
+#define USING_MOTORSETUP
 #define USING_ODOMETRY
 #include "main.h"
 /**
